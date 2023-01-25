@@ -4,31 +4,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faHouseChimney, faBars, faXmark
 } from '@fortawesome/free-solid-svg-icons'
+import Link from "next/link";
 
 const menus = [1,2,3,4,5]
 
 const header = (props: any) => {
   return (
     <Popover className='flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10'>
-      <div className='flex justify-start lg:w-0 lg:flex-2'>
-        <a href="#">
+      <div className='flex justify-start mx-3 lg:w-0 lg:flex-2'>
+        <Link href="/">
           <span className='sr-only'></span>
           <FontAwesomeIcon icon={faHouseChimney} className="h-6 w-6"/>
-        </a>
+        </Link>
       </div>
       <div className='hidden mx-20 items-center justify-center md:w-0 md:flex-1 md:flex'>
         <div className="mx-10">
-          <a href="#">전체 글</a>
+          <Link href="#">전체 글</Link>
         </div>
         <div className="mx-10">
-          <a href="#">카테고리</a>
+          <Link href="#">카테고리</Link>
         </div>
         <div className="mx-10">
-          <a href="#">??</a>
+          <Link href="#">??</Link>
         </div>
       </div>
       <div className="hidden md:flex-2 md:flex">
-        <a href="#" className="ml-8 inline-flex items-center jusify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">로그인</a>
+        <div className="ml-8 inline-flex items-center jusify-center whitespace-nowrap rounded-md border border-transparent bg-jyr px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-jyr">
+          <Link href='/login'>로그인</Link>
+        </div>
       </div>
       <div className="-my-2 -mr-2 md:hidden">
         <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -49,10 +52,10 @@ const header = (props: any) => {
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <a href="#">
+                    <Link href="#">
                       <span className='sr-only'></span>
                       <FontAwesomeIcon icon={faHouseChimney} className="h-6 w-6"/>
-                    </a>
+                    </Link>
                   </div>
                   <div className='-mr-2'>
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
