@@ -19,7 +19,7 @@ const header = (props: any) => {
       </div>
       <div className='hidden mx-20 items-center justify-center md:w-0 md:flex-1 md:flex'>
         <div className="mx-10">
-          <Link href="#">전체 글</Link>
+          <Link href="posts">전체 글</Link>
         </div>
         <div className="mx-10">
           <Link href="#">카테고리</Link>
